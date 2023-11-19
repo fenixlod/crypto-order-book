@@ -1,0 +1,25 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.lunix'
+version = '1.0.0'
+
+ext {
+}
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation("com.fasterxml.jackson.core:jackson-databind:2.16.0")
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
